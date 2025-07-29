@@ -11,6 +11,11 @@ class Home {
      * @return string
      */
     public static function getHome() {
-        return View::render('pages/home');
+
+        return View::render('pages/home', [
+            'name'          => 'Weslei Aurelio',
+            'description'   => 'Descrição teste!'
+        ]);
+        
     }
 }
