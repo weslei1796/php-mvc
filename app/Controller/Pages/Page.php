@@ -15,7 +15,25 @@ class Page {
 
         return View::render('pages/page', [
             'title'   => $title,
-            'content' => $content
+            'header'  => self::getHeader(),
+            'content' => $content,
+            'footer'  => self::getFooter() 
         ]);
+    }
+
+    /**
+     * Método responsável por renderizer o conteudo do header da aplicação
+     * @return string
+     */
+    private static function getHeader() {
+        return View::render('pages/header');
+    }
+
+    /**
+     * Método responsável por renderizar o conteudo do footer da aplicação
+     * @return string
+     */
+    private static function getFooter() {
+        return View::render('pages/footer');
     }
 }
