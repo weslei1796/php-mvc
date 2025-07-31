@@ -4,9 +4,8 @@ require __DIR__.'/vendor/autoload.php';
 
 use \App\Controller\Pages\Home;
 
-echo Home::getHome();
+$obResponse = new \App\Http\Response(500, 'Olá, mundo!');
+$obResponse->sendResponse();
+exit;
 
-/**
- * Parei na aula 2!
- * Minuto: 9:57
- */
+echo Home::getHome();
